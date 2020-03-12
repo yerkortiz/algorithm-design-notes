@@ -1,7 +1,7 @@
 /* 
     Author: Yerko Ortiz
-    Código para transformar un natural base 10, 
-    en un natural base k.
+    Código para transformar un número natural 
+    de base 10, en un número natural de base k.
 */
 //import java.util.Scanner;
 public class PROGRAM {
