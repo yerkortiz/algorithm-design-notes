@@ -1,4 +1,5 @@
 /* 
+    Author: Yerko Ortiz
     Código para transformar un natural base 10, 
     en un natural base k.
 */
@@ -8,14 +9,14 @@
 typedef unsigned long long int uint64_t;
 
 #define EXIT_PROGRAM return 0
-/* transformacion de un entero base 10 a base k */
+/* transformación de un número entero base 10 a base k */
 void solution(uint64_t n, uint64_t k)
 {
     if(n > 1) solution(n / k, k);
     printf("%llu ", n % k);
 }
-/* transformacion de un entero base 10 a base 2 
-    usando operaciones binarias */
+/* transformación de un número entero base 10 
+    a base 2 usando operaciones binarias */
 void bin(uint64_t n)
 {
     if(n > 1) bin(n >> 1);
