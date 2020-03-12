@@ -16,7 +16,7 @@ void solution(uint64_t n, uint64_t k)
     printf("%llu ", n % k);
 }
 /* transformación de un número entero base 10 
-    a base 2 usando operaciones binarias */
+    a base 2 usando operaciones logicas */
 void bin(uint64_t n)
 {
     if(n > 1) bin(n >> 1);

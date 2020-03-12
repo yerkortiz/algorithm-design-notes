@@ -1,3 +1,8 @@
+/* 
+    Author: Yerko Ortiz
+    Código para transformar un natural base 10, 
+    en un natural base k.
+*/
 //import java.util.Scanner;
 public class PROGRAM {
     static void solution(int n, int k) 
