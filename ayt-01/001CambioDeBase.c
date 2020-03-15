@@ -1,5 +1,4 @@
 /* 
-    Autor: Yerko Ortiz
     Código para transformar un número natural 
     de base 10, en un número natural de base k.
 */
