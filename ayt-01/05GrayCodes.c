@@ -1,5 +1,7 @@
 #include <stdio.h>
-int main(int argv, char **argc)
-{
-    return 0;
+int main() {
+	int n,k;
+	scanf("%d %d",&n,&k);
+	printf("%d\n", k^(k>>1));
+	return 0;
 }

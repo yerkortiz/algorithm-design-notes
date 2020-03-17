@@ -8,5 +8,6 @@ void collatz(int n)
 }
 int main(int argv, char **argc)
 {
+    collatz(3);
     return 0;
 }
