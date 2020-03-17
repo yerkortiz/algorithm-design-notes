@@ -8,6 +8,6 @@ class gcd
     }
     public static void main(String args[]) 
     { 
-        gcd(16, 8);
+        gcd(123, 51);
     } 
 } 

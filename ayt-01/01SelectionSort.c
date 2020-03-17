@@ -11,6 +11,14 @@ void selectionSort(int arr[], int n)
         SWAP(arr[min], arr[i], int); 
     } 
 } 
+void bubbleSort(int arr[], int n)
+{
+    int i, j;
+    for(i = 0; i < n; ++i)
+        for(j = i; j < n; ++j)
+            if(arr[i] > arr[j])
+                SWAP(arr[i]), arr[j], int);
+}
 void printArr(int arr[], int n)
 {
     int i;

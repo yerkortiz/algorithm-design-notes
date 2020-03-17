@@ -8,6 +8,7 @@ void collatz(int n)
 }
 int main(int argv, char **argc)
 {
-    collatz(3);
+    //collatz(3);
+    printf("%i", 123%51);
     return 0;
 }
