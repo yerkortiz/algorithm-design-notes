@@ -3,7 +3,7 @@
     El programa lee un entero N que indica el largo de
     un arreglo y posteriormente lee un arreglo de largo N.
     la funcion sum, suma todos los elementos del arreglo
-    y luego imprime el resultado de la suma al final.
+    y luego imprime el resultado de la suma en el main.
  */
 import java.util.Scanner; 
 class Sum
