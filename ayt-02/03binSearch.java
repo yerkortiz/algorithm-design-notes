@@ -1,26 +1,31 @@
 class BinarySearch { 
-    boolean binarySearch(int arr[], int l, int r, int x) 
+    static boolean binarySearch1(int arr[], int lo, int hi, int key) 
     { 
-        if (r >= l) { 
-            int mid = l + (r - l) / 2; 
-            if (arr[mid] == x) 
+        if (hi >= lo) { 
+            int mid = lo + (hi - lo) / 2; 
+            if (arr[mid] == key) 
                 return true; 
-            if (arr[mid] > x) 
-                return binarySearch(arr, l, mid - 1, x); 
-            return binarySearch(arr, mid + 1, r, x); 
+            if (arr[mid] > key) 
+                return binarySearch1(arr, lo, mid - 1, key); 
+            return binarySearch1(arr, mid + 1, hi, key); 
         } 
         return false; 
     } 
+    static boolean binarySearch2(int arr[], int n, int key)
+    {
+        int k = 0;
+        for(int b = n/2; b >= 1; b /= 2) {
+            while(k + b < n &&  arr[k + b] <= key) k += b;
+        }
+        if(arr[k] == key) return true;
+        return false;
+    }
     public static void main(String args[]) 
-    { 
-        BinarySearch ob = new BinarySearch(); 
+    {  
         int arr[] = { 2, 3, 4, 10, 40 }; 
         int n = arr.length; 
-        int x = 10; 
-        int result = ob.binarySearch(arr, 0, n - 1, x); 
-        if (result == -1) 
-            System.out.println("Element not present"); 
-        else
-            System.out.println("Element found at index " + result); 
+        //boolean result1 = binarySearch1(arr, 0, n - 1, 2); 
+        boolean result2 = binarySearch2(arr, n, 39);
+        System.out.println(result2);
     } 
 } 
