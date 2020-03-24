@@ -6,9 +6,9 @@ class BinarySearch {
             int mid = lo + (hi - lo) / 2; 
             if (arr[mid] == key) 
                 return true; 
-            if (arr[mid] > key) 
+            if (arr[mid] > key) //irse a la izquierda
                 return binarySearch1(arr, lo, mid - 1, key); 
-            return binarySearch1(arr, mid + 1, hi, key); 
+            return binarySearch1(arr, mid + 1, hi, key); // irse a la derecha
         } 
         return false; 
     } 
@@ -17,8 +17,7 @@ class BinarySearch {
     {
         int k = 0;
         for(int b = n/2; b >= 1; b /= 2)
-            while(k + b < n &&  arr[k + b] <= key) 
-                k += b;
+            while(k + b < n &&  arr[k + b] <= key) k += b;
         if(arr[k] == key) return true;
         return false;
     }

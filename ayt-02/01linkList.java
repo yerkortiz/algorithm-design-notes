@@ -1,8 +1,8 @@
 class List {
-    Node head;
+    Node head;//nodo centinela
     static class Node {
         int value;
-        Node next;
+        Node next;//siguiente nodo
         Node(int v) {
             value = v;
             next = null;
@@ -20,9 +20,9 @@ class List {
     public void insertFirst(int v)
     {
         Node n = new Node(v);
-        if(head == null) {
+        if(head == null) { //lista esta vacia
             head = n;
-        } else {
+        } else { // lista no esta vacia
             Node aux = head;
             n.next = aux;
             head = n;
@@ -37,15 +37,22 @@ class List {
         }
         return false;
     }
-    public deleteFirst()
+    public void deleteFirst()
     {
-        if (head.next != null) head = head.next;
-        else head = null;
+        if (head.next != null) head = head.next;//hay 2 o mas elementos
+        else head = null;//hay 0 o 1 elemento
     }
     public static void main(String[] args)
     {
         List l = new List();
-        l.insertFirst(22);
+        l.insertFirst(24);
+        //l.printList();
+        l.insertFirst(4);
+        l.insertFirst(81);
+        l.deleteFirst();
         l.printList();
+
+        //Node n = new Node(51);
+        //System.out.print(n.value);
     }
 }
