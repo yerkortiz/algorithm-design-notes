@@ -1,6 +1,6 @@
-class decToBin
+class printDecToBin
 { 
-    static void bin(int n)
+    static void printDecToBin(int n)
     {
         if (n > 1) bin(n >> 1);
         System.out.print(n & 1);
