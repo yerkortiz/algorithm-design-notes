@@ -17,6 +17,7 @@ class problema1 {
         Stack<Integer> stack1 = new Stack<Integer>(); 
         Stack<Integer> stack2 = new Stack<Integer>(); 
         Stack<Integer> stack3 = new Stack<Integer>(); 
+        
         for(int i = 0; i < n1; ++i)
             stack1.push(input.nextInt());
         for(int i = 0; i < n2; ++i)
