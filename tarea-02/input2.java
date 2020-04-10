@@ -13,9 +13,15 @@ public class problema2
     { 
         Scanner input = new Scanner(System.in);
         int n = input.nextInt(), m = input.nextInt();
+        int[] arr = new int[9];
+        int max = 0;
         Queue<Integer> queue = new LinkedList<>(); 
-        for(int i = 0; i < n; ++i)
-            queue.add(input.nextInt());
+        for(int i = 0; i < n; ++i) {
+            int k = input.nextInt();
+            if(k > max) max = k;
+            ++arr[k - 1];
+            queue.add(k);
+        }
         input.close();
         //for(int i = 0; i < n; ++i)
         //    System.out.println(queue.remove());

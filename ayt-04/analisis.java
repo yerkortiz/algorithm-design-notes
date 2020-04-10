@@ -3,7 +3,7 @@ public class Analisis {
     public static int algoritmo1(int arr[], int n) 
     { 
         int cont = 0;
-        for (int i = 0; i < n; i ++)
+        for (int i = 0; i < n; i ++) //O(N^2)
             for (int j = i, tmp = 0; j < n; j ++) { 
                 tmp += arr[j];
                 cont += tmp; 
@@ -13,9 +13,12 @@ public class Analisis {
     public static int algoritmo2( int arr[] , int n ) 
     { 
         int cont = 0; 
-        for (int i=0; i<n; i++) 
-            result += (arr[i] * (i+1) * (n-i)); 
-        return result ; 
+        for (int i=0; i<n; i++) { //O(n)
+            cont += (arr[i] * (i+1) * (n-i)); 
+            System.out.println(arr[i] + " " + (i + 1) + " " + (n - i));
+            System.out.println(cont);
+        }
+        return cont ; 
     }
     static boolean algoritmo3(int arr[], int n, int key)
     {
@@ -27,8 +30,9 @@ public class Analisis {
     }
     public static void main(String args[])
     {
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
-        int[] arr = new int[n];
+        //Scanner input = new Scanner(System.in);
+        //int n = input.nextInt();
+        int[] arr = {1, 2, 3, 4};
+        System.out.println(algoritmo2(arr, 4));
     }
 }
