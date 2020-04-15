@@ -14,15 +14,15 @@ class problem2 {
             leave[i] = in.nextInt();
         }
         in.close();
-        Arrays.sort(arrive);
-        Arrays.sort(leave);
+        Arrays.sort(arrive);//O(nlgn)
+        Arrays.sort(leave);//O(nlgn)
         int max = 0, cont = 0;
         for(int i = 0, j = 0; i < n;) {
-            if(arrive[i] < leave[j]){
+            if(arrive[i] < leave[j]){ // están al mismo tiempo
                 ++i; ++cont;
-            } else if(arrive[i] > leave[j]) {
+            } else if(arrive[i] > leave[j]) { // no están al mismo tiempo
                 ++j; --cont;
-            } else {
+            } else { // continuo porque llega y se va alguien al mismo tiempo
                 ++i; ++j;
             }
             if(cont >= max) max = cont;
