@@ -1,3 +1,4 @@
+/* Diccionario */
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,11 +17,9 @@ public class main {
 		}
 		String ans = strB.toString();
 		Matcher m = p.matcher(ans);
-		while(m.find()) {
+		while(m.find())
 			st.add(m.group());
-		}
-		for(String i : st) {
+		for(String i : st) 
 			System.out.println(i);
-		}
 	}
 }
