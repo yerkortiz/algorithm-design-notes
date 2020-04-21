@@ -1,8 +1,7 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-class P2
-{
+class P2 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		int n = 5;
