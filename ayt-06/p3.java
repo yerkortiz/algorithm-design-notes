@@ -3,19 +3,17 @@ class GFG {
 	static String commonPrefixUtil(String str1, String str2) { 
 		String result = ""; 
 		int n1 = str1.length(), n2 = str2.length(); 
-
-		for (int i = 0, j = 0; i <= n1 - 1 && 
-				j <= n2 - 1; i++, j++) { 
-			if (str1.charAt(i) != str2.charAt(j)) { 
+		for (int i = 0, j = 0; i <= n1 - 1 && j <= n2 - 1; i++, j++) { 
+			if (str1.charAt(i) != str2.charAt(j)) 
 				break; 
-			} 
 			result += str1.charAt(i); 
 		} 
 		return (result); 
 	} 
+	/* d & c */
 	static String commonPrefix(String arr[], int low, int high) { 
-		if (low == high) return (arr[low]); 
-
+		if (low == high) 
+			return (arr[low]); 
 		if (high > low) { 
 			int mid = low + (high - low) / 2; 
 			String str1 = commonPrefix(arr, low, mid); 
