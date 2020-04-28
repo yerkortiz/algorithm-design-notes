@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int sol(int a, int b) {
+int sol(int a, int b) { //euclides
       if(b == 0) return a;
       return sol(b, a % b);
 }
