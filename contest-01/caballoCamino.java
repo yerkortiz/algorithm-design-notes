@@ -12,7 +12,7 @@ public class Main {
         q.add(u); q.add(v); q.add(cnt);
         while(!q.isEmpty()) {
             u = q.poll(); v = q.poll(); cnt = q.poll();
-            mtrx[u][v] = true;
+            mtrx[u][v] = true;//ya pasé por este punto
             if(u == x && v == y) break; // termina
             for(int i = 0; i < 8; ++i) { // encolar hijos
                 a = u + moves[i][0]; b = v + moves[i][1];

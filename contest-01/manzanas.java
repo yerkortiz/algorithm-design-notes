@@ -7,18 +7,17 @@ public class Main {
                 apples[N] = Math.abs(S - 2*current_weight);
             return;
         } else {
-            current_weight += apples[k];
+            current_weight += apples[k]; // agrego al saco el elemento en apples[k]
             search(k + 1, N, apples, S, current_weight);
-            current_weight -= apples[k];
+            current_weight -= apples[k]; // no agrego al saco el elemento en apples[k]
             search(k + 1, N, apples, S, current_weight);
         }
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        List<Integer> vctr = new ArrayList<Integer>();
         int N = in.nextInt(),
-            S = 0;
-        int[] apples = new int[N + 1];
+            S = 0; // donde guardaré la suma total de pesos del cajon inicial
+        int[] apples = new int[N + 1]; // apples[N] guardo el mínimo
         for(int i = 0; i < N; ++i) {
             apples[i] = in.nextInt();
             S += apples[i];

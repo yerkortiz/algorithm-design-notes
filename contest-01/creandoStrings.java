@@ -2,7 +2,7 @@ import java.util.*;
 public class Main { 
     static Set<String> tree_set = new TreeSet<>();
     static void Permutation(String str, String ans) { 
-        if (str.length() == 0) { 
+        if (str.length() == 0) { // encontramos una permutación
             tree_set.add(ans);
             return; 
         } 
