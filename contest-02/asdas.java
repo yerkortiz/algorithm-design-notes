@@ -11,29 +11,6 @@ static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2)
     }
     return temp1.data;
 }
-public static int height(Node root) {
-    if(root != null)
-        return 1 + max(height(root.left), height(root.right));
-    else
-        return -1;
-}
-public static void topView(Node root) {
-    int MAX = 500; 
-    int[] top = new int[MAX*2];
-    Queue<Object[]> queue = new ArrayDeque<>();
-    queue.add(new Object[]{root, MAX});
-    while(!queue.isEmpty()) {
-        Object[] array = queue.remove();
-        Node node = (Node)array[0];
-        Integer order = (Integer)array[1];
-        if(node == null) continue;
-        if(top[order] == 0) top[order] = node.data;
-        queue.add(new Object[]{node.left, order-1});
-        queue.add(new Object[]{node.right, order+1});
-    }
-        for(int data: top) if(data != 0) System.out.print(data + " ");
-}
-
 /*insertar en posicion x*/ 
 static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
     // crear un nodo con el dato a insertar
