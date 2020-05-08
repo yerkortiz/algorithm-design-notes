@@ -32,8 +32,11 @@ public static void topView(Node root) {
         queue.add(new Object[]{node.right, order+1});
     }
         for(int data: top) if(data != 0) System.out.print(data + " ");
-    }
+}
+
+/*insertar en posicion x*/ 
 static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+    // crear un nodo con el dato a insertar
     SinglyLinkedListNode n = new SinglyLinkedListNode(data);
     if(position == 1) { // se asume que los testcases no tendrán listas vacías
         n.next = head;
@@ -42,16 +45,17 @@ static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int 
     }
     int i = 1;
     for(SinglyLinkedListNode aux = head; aux != null; aux = aux.next) {
-        if((i++) == position){ // se encontró la posicion donde insertar
+        if(i == position){ // se encontró la posicion donde insertar
             if(aux.next == null) {//caso insertar al final
                 aux.next = n;
                 break;
             }
-            SinglyLinkedListNode temp = aux.next;
+            SinglyLinkedListNode temp = aux.next; // insertar entre medio
             aux.next = n;
             n.next = temp;
             break;
         }
+        ++i;
     }
     return head;
 }
