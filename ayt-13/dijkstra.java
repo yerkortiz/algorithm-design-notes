@@ -15,21 +15,22 @@ public class Dijkstra {
             adj_mtrx[u - 1][v - 1] = w;
             adj_mtrx[v - 1][u - 1] = w;
         }
-        int[] distance = new int[V];
-        PriorityQueue<Node> pq = new PriorityQueue<Node>(V, new Node());
         boolean[] visited = new boolean[V];
-        /* Incializar las variables */ 
-        int source = 0; //origen
+        int[] distance = new int[V];
         int inf = ((1 << 30) | ((1 << 30) - 1));//valor maximo de int de 32 bits en complemento a 2
         Arrays.fill(distance, inf);
-
+        PriorityQueue<Node> pq = new PriorityQueue<Node>(V, new Node());
+        /* Incializar las variables */ 
+        int source = 0; //origen
         /*algoritmo de dijkstra*/
+
         pq.add(new Node(source, 0));
         distance[source] = 0;
 
         while(!pq.isEmpty()) {
             int a = pq.peek().node; pq.poll();
             if(visited[a] == true) continue;
+            visited[a] = true;
             for(int d = 0; d < V; ++d) {
                 if(adj_mtrx[a][d] == 0) continue;
                 int w = adj_mtrx[a][d];
